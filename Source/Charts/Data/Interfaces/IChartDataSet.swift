@@ -10,7 +10,6 @@
 //
 
 import Foundation
-import CoreGraphics
 
 @objc
 public protocol IChartDataSet
@@ -179,6 +178,8 @@ public protocol IChartDataSet
     func addColor(_ color: NSUIColor)
     
     func setColor(_ color: NSUIColor)
+    
+    var valueOffsetY: CGFloat { get set }
     
     /// if true, value highlighting is enabled
     var highlightEnabled: Bool { get set }

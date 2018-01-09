@@ -232,6 +232,7 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
         colors.append(color)
     }
     
+    
     /// Sets colors to a single color a specific alpha value.
     /// - parameter color: the color to set
     /// - parameter alpha: alpha to apply to the set `color`
@@ -263,6 +264,8 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
         self.colors = colors
     }
     
+    open var valueOffsetY = CGFloat(0)
+    
     /// if true, value highlighting is enabled
     open var highlightEnabled = true
     
@@ -270,7 +273,7 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
     open var isHighlightEnabled: Bool { return highlightEnabled }
     
     /// Custom formatter that is used instead of the auto-formatter if set
-    internal var _valueFormatter: IValueFormatter?
+    @objc internal var _valueFormatter: IValueFormatter?
     
     /// Custom formatter that is used instead of the auto-formatter if set
     open var valueFormatter: IValueFormatter?
@@ -422,3 +425,5 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
         return copy
     }
 }
+
+
